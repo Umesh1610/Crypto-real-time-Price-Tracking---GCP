@@ -3,7 +3,7 @@
 
 > A real-time, serverless cryptocurrency trade tracking and alerting system built with Google Cloud Platform 🧠💹
 
----
+
 
 ## 📌 Description
 
@@ -41,6 +41,9 @@ Built for analysts, crypto enthusiasts, and data engineers looking to integrate 
 
 5. **🧮 BigQuery**  
    - Stores raw data + transforms data + calculates metrics using scheduled SQL jobs.
+   - Data from pub/sub and dataflow is stored in raw_trades table which has multiline json data
+   - The multine JSON data is transformed into processed table in sql using UNNEST and JSON_EXTRACT_SCALAR (Based on last updated timestamp, I am processing only new rows into my processed table, and the query is scheduled using bigquery schedueler, alternatively we can use cloud formation and cloud schedueler for even lower latencies)
+   - The data in processed table is then aggregated for downstream analytics (looker) and stored in metrics_table (I used merge logic to identify and incrementally upload new rows)
 
 6. **📊 Looker Studio**  
    - Visualizes KPIs in real time.
