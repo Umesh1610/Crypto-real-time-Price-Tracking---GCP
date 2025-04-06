@@ -7,7 +7,7 @@
 
 ## 📌 Description
 
-**Crypto Trade Tracker** is a real-time BTC-USDT price tracking and alert system designed to monitor market trends and trigger alerts for significant changes. It fetches trade data from the OKX exchange and utilizes a full GCP pipeline for processing, storing, and visualizing data.
+**Crypto Trade Tracker** is a real-time BTC-USDT price tracking and alert system designed (1 minute latency) to monitor market trends and trigger alerts for significant changes. It fetches trade data from the OKX exchange and utilizes a full GCP pipeline for processing, storing, and visualizing data.
 
 Built for analysts, crypto enthusiasts, and data engineers looking to integrate real-time insights with dashboards and alerts.
 
@@ -17,7 +17,7 @@ Built for analysts, crypto enthusiasts, and data engineers looking to integrate 
 
 ✅ **Real-Time Data Ingestion** — Automatically fetches BTC-USDT trade data via OKX API  
 ✅ **Serverless Architecture** — Fully cloud-native on GCP using Pub/Sub, Dataflow, and BigQuery  
-✅ **Live Metrics & Alerts** — Detects anomalies like price spikes > 1% in a minute  
+✅ **Live Metrics & Alerts** — Detects anomalies like price spikes > 5% in a minute  
 ✅ **Looker Studio Dashboard** — Interactive, filterable real-time visualizations  
 ✅ **Scalable + Incremental** — Metrics update every minute using scheduled BigQuery queries  
 
