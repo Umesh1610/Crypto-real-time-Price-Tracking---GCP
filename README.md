@@ -1,6 +1,5 @@
 # 🚀 Crypto Trade Tracker
 
-![Crypto Trade Tracker Architecture](https://raw.githubusercontent.com/your-username/crypto-trade-tracker/main/path-to-image/Crypto_Trade_Architecture.png)
 
 > A real-time, serverless cryptocurrency trade tracking and alerting system built with Google Cloud Platform 🧠💹
 
@@ -18,7 +17,7 @@ Built for analysts, crypto enthusiasts, and data engineers looking to integrate 
 
 ✅ **Real-Time Data Ingestion** — Automatically fetches BTC-USDT trade data via OKX API  
 ✅ **Serverless Architecture** — Fully cloud-native on GCP using Pub/Sub, Dataflow, and BigQuery  
-✅ **Live Metrics & Alerts** — Detects anomalies like price spikes > 5% in a minute  
+✅ **Live Metrics & Alerts** — Detects anomalies like price spikes > 1% in a minute  
 ✅ **Looker Studio Dashboard** — Interactive, filterable real-time visualizations  
 ✅ **Scalable + Incremental** — Metrics update every minute using scheduled BigQuery queries  
 
@@ -38,10 +37,10 @@ Built for analysts, crypto enthusiasts, and data engineers looking to integrate 
    - Streams data to Dataflow.
 
 4. **🛠️ Dataflow**  
-   - Parses and transforms the data.
+   - ELT from pub/sub to Bigquery (used pub/sub to bigquery template)
 
 5. **🧮 BigQuery**  
-   - Stores raw data + calculates metrics using scheduled SQL jobs.
+   - Stores raw data + transforms data + calculates metrics using scheduled SQL jobs.
 
 6. **📊 Looker Studio**  
    - Visualizes KPIs in real time.
@@ -88,5 +87,5 @@ graph TD;
     B --> C[Pub/Sub]
     C --> D[Dataflow Pipeline]
     D --> E[BigQuery - Raw Table]
-    E --> F[BigQuery - Aggregated Metrics]
+    E --> F[BigQuery - Transofrmation and Aggregated Metrics]
     F --> G[Looker Studio Dashboard]
