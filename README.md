@@ -78,7 +78,8 @@ Built for analysts, crypto enthusiasts, and data engineers looking to integrate 
 - 📌 **Scorecards** for current state KPIs  
 - 🔍 **Filters** for date, alert status, and direction  
 
-> 🌐 Access the dashboard: [Crypto Trade Dashboard](#) *(update with real URL)*
+> Check Screenshots folder for more dashboard views
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/29647f81-1469-465d-9455-06489009f1ea" />
 
 ---
 
